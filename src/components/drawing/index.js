@@ -57,6 +57,10 @@ drawing.setRect = function(s, x, y, w, h) {
     s.call(drawing.setPosition, x, y).call(drawing.setSize, w, h);
 };
 
+drawing.setViewBox = function(s, x, y, w, h) {
+  s.attr('viewBox', [x, y, w, h].map(String).join(' ')).attr('preserveAspectRatio', 'xMinYMax meet');
+};
+
 /** Translate node
  *
  * @param {object} d : calcdata point item
