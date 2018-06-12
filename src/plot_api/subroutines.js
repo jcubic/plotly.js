@@ -108,7 +108,7 @@ exports.lsInner = function(gd) {
             height: fullLayout.height + 'px'
         })
         .selectAll('.main-svg')
-            .call(Drawing.setSize, fullLayout.width, fullLayout.height);
+            .call(Drawing.setViewBox, 0, 0, fullLayout.width, fullLayout.height);
 
     gd._context.setBackground(gd, fullLayout.paper_bgcolor);
 
